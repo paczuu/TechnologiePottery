@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="images/logo.jpg" alt="Logo Pottery" class="logo"></a>
+        <nav class="nav-menu">
+            <a href="/">Sklep</a>
+            <a href="#o-nas">O nas</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="logowanie.html" id="accountLink">Konto</a>
+        
+        <div class="icon-cart">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+            </svg>
+            <span>0</span>
+        </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="contentTab">
+            <!-- Dynamiczna zawartość strony -->
+        </div>
+    </div>
+
+    <div class="cartTab">
+        <div class="listCart"></div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+
+    <div id="o-nas">
+        <div class="container">
+            <h2>O nas</h2>
+            <p>Od ponad dwóch dekad tworzymy wyjątkową ręcznie robioną porcelanę, uznaną zarówno w kraju, jak i za granicą. Nasza pasja i doświadczenie gwarantują najwyższą jakość, precyzję wykonania i unikalny design.</p>
+            <p>Stosujemy starannie wyselekcjonowane materiały i tradycyjne techniki rzemieślnicze. Wierzymy, że jakość tkwi w detalach, dlatego dbamy o każdy szczegół. Nasza porcelana łączy elegancję z funkcjonalnością, idealnie dopełniając każde wnętrze.</p>
+            <p>Dziękujemy za zaufanie i zapraszamy do zapoznania się z naszą ofertą.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <ul>
+                    <li><a href="dostawa.html">Wysyłka i Zwroty</a></li>
+                    <li><a href="polityka_sklepu.html">Polityka sklepu</a></li>
+                    <li><a href="#">Metody płatności</a></li>
+                    <li><a href="#">Polityka plików cookie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li>Tel.: 123-456-789</li>
+                    <li><a href="mailto:info@pottery.pl">info@pottery.pl</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://pinterest.com/" target="_blank">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Zapisz się do Newsletter</h4>
+                <form action="subscribe.php" method="post">
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <button type="submit">Subskrybuj</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js" type="module"></script>
+</body>
+</html>
