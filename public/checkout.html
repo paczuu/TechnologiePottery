@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Pottery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app"></div>
+    <div id="temporaryContent">
+        <div class="checkout">
+            <h1>Podsumowanie Zamówienia</h1>
+            <div id="checkout-summary">
+
+            </div>
+            <div id="address-form" style="display: none;">
+                <h2>Podaj adres dostawy</h2>
+                <form id="addressForm">
+                    <label for="address">Adres:</label>
+                    <input type="text" id="address" name="address" required>
+                    <button type="submit" class="submitAddress">Zapłać</button>
+                </form>
+            </div>
+            <div id="user-form" style="display: none;">
+                <h2>Podaj swoje dane lub się zaloguj</h2>
+                <form id="checkoutForm">
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="address">Adres:</label>
+                    <input type="text" id="address" name="address" required>
+                    <button type="submit" class="payNow">Zapłać</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="checkout.js" type="module"></script>
+</body>
+</html>
