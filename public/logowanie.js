@@ -58,10 +58,26 @@ loadTemplate().then(() => {
         })
         .then(response => response.text().then(text => ({ status: response.status, text })))
         .then(({ status, text }) => {
-            alert(text);
+            const errorMessageContainer = document.getElementById('error-message-container');
+            errorMessageContainer.innerHTML = '';
+            
             if (status === 200) {
+                alert(`Witaj z powrotem, ${email}`);
                 localStorage.setItem('loggedInUser', email);
                 window.location.href = '/index.html';
+            } else {
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.textContent = 'Błędne dane logowania';
+                
+                errorMessageContainer.appendChild(errorMessage);
+
+                // Flash register button
+                const registerButton = document.querySelector('.toggle-panel .hidden#register');
+                registerButton.classList.add('flash');
+                setTimeout(() => {
+                    registerButton.classList.remove('flash');
+                }, 4000);
             }
         })
         .catch(error => console.error('Error:', error));

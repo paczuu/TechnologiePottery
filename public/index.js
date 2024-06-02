@@ -42,5 +42,18 @@ const setupAccountNav = () => {
             localStorage.removeItem('loggedInUser');
             window.location.href = '/index.html';
         });
+    } else {
+        accountLink.textContent = "Konto";
+        accountLink.href = "logowanie.html";
     }
 };
+
+const checkUserStatus = () => {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (!loggedInUser) {
+        window.location.href = 'logowanie.html';
+    }
+};
+
+// Call this function on pages that require the user to be logged in
+checkUserStatus();
